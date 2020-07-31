@@ -73,3 +73,7 @@ home UUID=<UUID_HOME> none luks,discard
 update-initramfs -k all -c
 ```
 11. After restarting, Ubuntu should prompt you to enter the passphrase to unlock the disks at startup.
+
+#### References: <br/>
+[1] : [Full_Disk_Encryption_Howto_2019](https://help.ubuntu.com/community/Full_Disk_Encryption_Howto_2019) <br/>
+[2] : [Encrypting disks on Ubuntu 19.04](https://medium.com/@chrishantha/encrypting-disks-on-ubuntu-19-04-b50bfc65182a)
