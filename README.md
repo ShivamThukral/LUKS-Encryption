@@ -4,8 +4,8 @@ These steps should work on Ubuntu 18.04 LTS and newer versions. <br/>
 **What is LUKS?** <br/>
 [The Linux Unified Key Setup (LUKS) is the standard for Linux hard disk encryption](https://gitlab.com/cryptsetup/cryptsetup/blob/master/README.md)
 
-*Note: Before you also think of encrypting your disks, please make sure to backup your data.*
-###Steps:
+*Note: Before you start encrypting your disks, please make sure to backup your data.* <br/>
+### Steps:
 1. **Booting Ubuntu 18.04 live image :** It’s required to encrypt partitions before installing Ubuntu. Therefore, boot from Ubuntu 18.04 live image and chose “Try Ubuntu" option.
 
 2. **Creating partitions :** use GParted (already installed on Ubuntu 18.04 live image) to create the following partiions.
