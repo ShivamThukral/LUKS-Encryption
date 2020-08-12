@@ -29,7 +29,7 @@ Once all partitions are successfully formed, we start to encrypt new partitions 
 	- If you have two drives (like my case), install Boot, Root, GRUB and EFI System Partition on the SDD and Data Partiion on the HDD. 
 
 - **Why Boot Parition in separate?**
-Initially, I had Boot and Root partition mounted on a single partition. With this partition scheme I was not able to successfully install Ubuntu. Using an encrypted Boot directory make things more complicated and I decided to keep my Boot directory unencrypted.
+	- Initially, I had Boot and Root partition mounted on a single partition. With this partition scheme I was not able to successfully install Ubuntu. Using an encrypted Boot directory make things more complicated and I decided to keep my Boot directory unencrypted.
 One benefit of having a separate Boot partition from the regular Root partition is that you can reduce on-disk file system complexity, which reduces the demands on the boot loader to bootstrap the kernel.
  
 3. **Encrypting the partitions:**
@@ -88,7 +88,7 @@ home UUID=<UUID_HOME> none luks,discard
 update-initramfs -k all -c
 ```
 
-**Additional Comments:**
+**Additional Comments:** <br/>
 **Steps 6-10:** These steps help you load the encrypted partitions at the startup. Following these steps to update the Linux kernel to load the partitions. You just need to enter the parapharase once to unclock the whole system.
 
 11. After restarting, Ubuntu should prompt you to enter the passphrase to unlock the disks at startup.
