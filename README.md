@@ -23,7 +23,7 @@ Once all partitions are successfully formed, we start to encrypt new partitions 
 	- **Root Partitiion:** This is where the OS will be installed. You really don’t need to give lots of space to root partition. In my experience 100 GB is more than enough.
 	- **Data Partition:** If you have chosen to hold your data in the same partition as the system partition, skip this step and proceed. I would strongly recommend you to keep data and system partion separate.
 	- **GRUB Partitiion:**  GRUB bootloader is the software that loads the Linux kernel. You'll be prompted by the GRUB menu which can contain a list of the operating systems installed (in the case of dual boot.)
-	- **EFI System Partion:**  A special partition required for a computer with UEFI to be able to boot. This step is only if your computer doesn't already have an ESP. If your computer already has an ESP, skip this step and proceed.
+	- **EFI System Partion:**  A special partition required for a computer with UEFI to be able to boot. Perform this step only if your computer doesn't have an EFI Systemp Partition. If your computer already has an EFI System Partition, skip this step and proceed.
 
 - **Number of drives?**
 	- If you have two drives (like my case), install Boot, Root, GRUB and EFI System Partition on the SDD and Data Partiion on the HDD. 
@@ -89,7 +89,7 @@ update-initramfs -k all -c
 ```
 
 **Additional Comments:** <br/>
-**Steps 6-10:** These steps help you load the encrypted partitions at the startup. Following these steps to update the Linux kernel to load the partitions. You just need to enter the parapharase once to unclock the whole system.
+**Steps 6-10:** These steps help you load the encrypted partitions at the startup. Following these steps will help you to load both the encrypted disk partitions at once.
 
 11. After restarting, Ubuntu should prompt you to enter the passphrase to unlock the disks at startup.
 
